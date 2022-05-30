@@ -1,4 +1,6 @@
-const path = require('path')
+/// <reference types="vitest" />
+
+import * as path from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
@@ -24,5 +26,9 @@ export default defineConfig({
         },
       },
     },
+  },
+
+  test: {
+    environment: "jsdom",
   },
 });
